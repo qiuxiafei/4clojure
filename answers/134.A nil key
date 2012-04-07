@@ -1,0 +1,9 @@
+﻿(true?  (#(and (contains? %2 %1) (nil? (%2 %1)) ) :a {:a nil :b 2}))
+	
+(false? (#(and (contains? %2 %1) (nil? (%2 %1)) ) :b {:a nil :b 2}))
+	
+(false? (#(and (contains? %2 %1) (nil? (%2 %1)) ) :c {:a nil :b 2}))
+
+
+
+;; #(nil?(%2 %1 0)) seems better
