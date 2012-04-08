@@ -1,0 +1,4 @@
+﻿#(= (seq %) (reverse %))
+
+;;(seq "abc") result in (\a \b \c)
+;; reverse will not evaluated as string ether.
