@@ -1,0 +1,3 @@
+﻿#(-> $& sort last)
+
+;; $& stand for all arguments, as a sequence
