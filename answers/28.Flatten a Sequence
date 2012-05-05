@@ -1,0 +1,4 @@
+﻿#(filter (complement sequential?) (tree-seq sequential? identity %))
+
+;; complement
+;; tree-seq

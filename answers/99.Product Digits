@@ -1,0 +1,10 @@
+﻿;; the math way
+(fn [a b]
+  (drop-while zero? 
+    (reverse 
+      (map #(mod (int(/ (* a b) %)) 10)
+           (take 10 (iterate #(* 10 %) 1))))))
+		   
+;; the trick way
+(fn [a b]
+  (map #(Integer/parseInt (str %))  (str (* a b))))

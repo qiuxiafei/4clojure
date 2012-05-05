@@ -1,0 +1,4 @@
+﻿(fn [y]
+  (fn [x] 
+    (apply * (repeat y x)))
+  )

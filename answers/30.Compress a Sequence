@@ -1,0 +1,13 @@
+﻿(fn [input]
+  (loop [i input res []]
+    (if (empty? i)
+      res
+      (if (= (last res) (first i))
+        (recur (rest i) res)
+        (recur (rest i) (conj res (first i))))
+  )))
+  
+  
+  ;; use partition-by
+  
+  #(map first (partition-by identity %))

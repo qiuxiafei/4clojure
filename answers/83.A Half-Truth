@@ -1,0 +1,7 @@
+﻿#(true? 
+  (and
+    (some true? %&)
+    (some false? %&)))
+
+;; %& stands for all argument as sequence
+;; some: Returns the first logical true value of (pred x) for any x in coll, else nil.

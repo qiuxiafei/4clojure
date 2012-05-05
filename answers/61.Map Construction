@@ -1,0 +1,3 @@
+﻿#(into {} (map vector %1 %2))
+
+;; well, into is so magic

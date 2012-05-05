@@ -1,0 +1,12 @@
+﻿(fn [a b]
+  (let [get-divisor (fn [n] (into #{}
+                              (filter #(zero? (rem n %))
+                                      (range 1 (inc n)))
+                              ))
+        a-divisor (get-divisor a)
+        b-divisor (get-divisor b)
+        commom-divisor (clojure.set/intersection a-divisor b-divisor)]
+    (apply max commom-divisor)))
+
+	
+	

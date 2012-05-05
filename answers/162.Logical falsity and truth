@@ -1,0 +1,2 @@
+﻿1
+;; In Clojure, only nil and false representing the values of logical falsity in conditional tests - anything else is logical truth.

@@ -1,0 +1,5 @@
+﻿(fn doset [sa sb]
+  (set (filter #(sa %) sb))
+  )
+  
+  ;; set : convert a seq to a set

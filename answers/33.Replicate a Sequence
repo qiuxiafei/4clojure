@@ -1,0 +1,2 @@
+﻿#(apply concat (map (fn [input](repeat %2 input)) %1))
+#(mapcat (fn [input](repeat %2 input)) %1)

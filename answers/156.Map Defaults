@@ -1,0 +1,12 @@
+﻿(fn [defval init-keys]
+  (loop [res {}, key init-keys]
+    (if (empty? key)
+      res
+      (recur 
+        (assoc res (first key) defval)
+        (rest key))
+      )))
+
+;; or
+	  
+#(zipmap %2 (repeat %1))

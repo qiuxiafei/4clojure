@@ -1,0 +1,4 @@
+﻿(fn grp-seq [func vals]
+  (into {}
+        (map #(vector (func (first % )) (vec %))
+             (partition-by func (sort vals)))))

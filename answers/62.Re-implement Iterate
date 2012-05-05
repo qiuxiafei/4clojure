@@ -1,0 +1,5 @@
+﻿(fn it [f x]
+  (lazy-seq (cons x (it f (f x)))))
+
+  ;; use lazy-seq to avoid stackoverflow
+  ;; you can recurse on anonimouse function

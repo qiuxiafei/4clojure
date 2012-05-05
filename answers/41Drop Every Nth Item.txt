@@ -1,0 +1,3 @@
+﻿(fn [vec n]
+  (mapcat #(take (dec n) %) (partition-all n vec))
+  )
