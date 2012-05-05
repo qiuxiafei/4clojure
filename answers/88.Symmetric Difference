@@ -1,5 +1,5 @@
 ﻿(fn set-diff [sa sb]
   (set
     (concat
-      (filter (complement sa) sb))))
       (filter (complement sb) sa)
+      (filter (complement sa) sb))))
