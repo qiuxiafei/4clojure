@@ -1,0 +1,5 @@
+﻿(fn istree? [root]
+  (or (nil? root)
+      (and (sequential? root)
+           (= 3 (count root))
+           (every? istree? (rest root)))))

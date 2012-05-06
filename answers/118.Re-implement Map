@@ -1,0 +1,4 @@
+﻿(fn mymap [f coll]
+  (if (false? (empty? coll))
+        (lazy-seq
+          (cons (f (first coll)) (mymap f (rest coll))))))

@@ -1,0 +1,8 @@
+﻿(fn pascal-tri [n]
+  (condp = n
+    1 [1]
+    (let [last (pascal-tri (dec n))
+          last-a (concat [0] last)
+          last-b (concat last [0])
+          ]
+      (vec(map + last-a last-b)))))

@@ -1,0 +1,7 @@
+﻿(fn cnt-sqrt [arg]
+  (let [get-digits (fn [n]
+                     (map #(Integer/valueOf (str %)) (String/valueOf n)))
+        digits-sqr (fn [n]
+                     (apply + (map #(* % %) (get-digits n))))
+        res-seq (filter #(< % (digits-sqr %)) arg)]
+    (count res-seq)))
