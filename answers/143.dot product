@@ -1,0 +1,2 @@
+﻿(fn [a b]
+   (apply + (map * a b)))
