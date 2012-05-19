@@ -1,0 +1,6 @@
+﻿(fn rotate [n v]
+  (->> (concat v v)
+    (drop (mod n (count v)))
+    (take (count v))
+    )
+  )

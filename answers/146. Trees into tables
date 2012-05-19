@@ -1,0 +1,5 @@
+﻿(fn [mp]
+  (into {}
+        (for [[k v] mp
+        [vk vv] v]
+    (vec [[k vk] vv]))))

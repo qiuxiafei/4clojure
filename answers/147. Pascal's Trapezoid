@@ -1,0 +1,12 @@
+﻿(fn pas-seq [a]
+  (let [pas (fn [a]
+            (let [a1 (concat [0] a)
+                  a2 (concat a [0])
+                  b (map + a1 a2)]
+                  b))]
+  (lazy-seq
+    (concat [a] (pas-seq (pas a) )))))
+;; or
+
+ (fn [v]
+  (iterate #(vec (map + (cons 0 %) (conj % 0))) v))

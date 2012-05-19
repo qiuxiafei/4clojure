@@ -1,0 +1,9 @@
+﻿(fn symmetry [[root left right]]
+  (let [mirror? (fn mirror? [a b]
+                  (cond
+                    (not= (sequential? a) (sequential? b)) false
+                    (sequential? a) (let [[ra La Ra] a
+                                          [rb Lb Rb] b]
+                                      (and (= ra rb) (mirror? La Rb) (mirror? Lb Ra)))
+                    :else (= a b)))]
+  (mirror? left right)))

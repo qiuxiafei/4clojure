@@ -1,0 +1,5 @@
+﻿reduce (fn [s e]
+  (if (some #(= % e) s)
+    s
+    (conj s e)))
+[] 

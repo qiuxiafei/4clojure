@@ -1,0 +1,5 @@
+﻿(fn [v]
+  (map #(vector %1 %2) v (range )))
+
+
+#(map vector % (range))

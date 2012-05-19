@@ -1,0 +1,3 @@
+﻿(fn split-by-type [v]
+  (for [[key value] (group-by class v)]
+    value))
