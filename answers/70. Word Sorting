@@ -1,0 +1,1 @@
+﻿#(sort-by (fn [v](.toLowerCase v))  (re-seq #"\w+" %))

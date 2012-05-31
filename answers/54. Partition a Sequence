@@ -1,0 +1,3 @@
+﻿(fn my-partition [n v]
+  (if (>= (count v) n)
+    (cons (take n v) (my-partition n (drop n v)))))

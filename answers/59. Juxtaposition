@@ -1,0 +1,3 @@
+﻿(fn my-juxt [& funcs]
+  (fn [& args]
+    (map #(apply % args) funcs )))

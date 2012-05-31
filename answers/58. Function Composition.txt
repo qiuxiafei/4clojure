@@ -1,0 +1,4 @@
+﻿(fn comb [& funcs]
+  (fn [& args]
+    (first
+      (reduce #(vector (apply %2 %1)) args (reverse funcs )))))

@@ -1,0 +1,8 @@
+﻿(fn [n]
+  (take n(filter 
+(fn is-prime [n]
+  (nil?
+  (some
+    #(zero? (mod n %))
+    (range 2 n))))
+(range 2 1000))))
