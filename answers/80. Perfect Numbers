@@ -1,0 +1,3 @@
+(fn is-perf-num [n]
+  (= n
+     (apply + (filter #(zero? (mod n %)) (range 1 n)))))

@@ -1,0 +1,5 @@
+(fn perf-square [s]
+  (let [nums (map #(Integer/valueOf %)  (clojure.string/split s #","))
+        all-perf-sq  (set (map #(* % %) (range 100)))
+        sq-nums (filter all-perf-sq nums)]
+(apply str (interpose "," sq-nums))))

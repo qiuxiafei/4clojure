@@ -1,0 +1,5 @@
+(fn [v]
+  (into #{}
+    (map set
+      (filter #(> (count %) 1)
+        (map val (group-by sort v))))))

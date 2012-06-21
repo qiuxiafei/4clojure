@@ -1,0 +1,12 @@
+(fn my-reduce
+ 
+  ([op input] (my-reduce op (first input) (rest input)))
+ 
+  ([op result input]
+ 
+  (lazy-seq
+    (if (empty? input) (list result)
+      (cons result
+            (my-reduce op
+                 (op result (first input))
+                 (rest input)))))))
